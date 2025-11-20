@@ -1,0 +1,32 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    'Gill Sans', 
+    'Gill Sans MT', 
+    Calibri, 
+    'Trebuchet MS', 
+    sans-serif;
+  line-height: 1.5;
+  font-size: 20px;
+  background: rgb(243, 255, 223);
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+a {
+  color: #54647a;
+  text-decoration: none;
+}
+ 
+a:hover {
+  color: rgb(76, 85, 128);
+}
+ 
+img {
+  max-width: 100%;
+  display: block;
+}
