@@ -23,6 +23,8 @@ export async function getStaticProps({ params }) {
     props: {
       postData,
     },
+    // Added revalidate to refresh the posts when new post is made on wordpress page
+    revalidate: 10,
   };
 }
 
