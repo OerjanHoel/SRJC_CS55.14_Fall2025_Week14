@@ -4,6 +4,7 @@
   font-weight: 700;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  font-family: var(--font-serif);
 }
  
 .headingXl {
@@ -12,12 +13,14 @@
   font-weight: 700;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  font-family: var(--font-serif);
 }
  
 .headingLg {
   font-size: 1.7rem;
   line-height: 1.4;
   margin: 1rem 0;
+  font-family: var(--font-serif);
 }
  
 .headingMd {
@@ -30,7 +33,7 @@
 }
  
 .borderCircle {
-  border-radius: 9999px;
+  border-radius: 0; 
 }
  
 .colorInherit {

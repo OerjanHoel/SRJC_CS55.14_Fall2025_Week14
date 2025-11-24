@@ -4,13 +4,17 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Oerjan Hoel';
-export const siteTitle = 'CS55.13';
+const name = 'CS55.13 Week 14 ISR + WP Database';
+export const siteTitle = 'CS55.13 Week 14 ISR + WP Database';
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
+        {/* Google Fonts: Roboto, Merriweather, Fira Code */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -52,7 +56,7 @@ export default function Layout({ children, home }) {
             </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/" className={utilStyles.colorInherit}>
-                {name}
+                {}
               </Link>
             </h2>
           </>

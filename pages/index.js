@@ -36,7 +36,7 @@ export default function Home({ allPostsData, desktopEnvs, packageManagers }) {
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Learn more about Linux</h2>
+        <h2 className={utilStyles.headingLg}>Distrobutions</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, distro_name }) => (
             <li className={utilStyles.listItem} key={id}>
