@@ -53,7 +53,36 @@
 .listItem {
   margin: 0 0 1.25rem;
 }
+
  
 .lightText {
   color: #4099e2;
+}
+
+/* Category list: display the three main sections horizontally on wide screens,
+   and stack vertically on small screens. */
+.categoryList {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.categoryListItem {
+  margin: 0;
+  /* allow each section to take up to ~30% but shrink on small screens */
+  flex: 1 1 30%;
+}
+
+@media (max-width: 640px) {
+  .categoryList {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .categoryListItem {
+    flex: none;
+  }
 }

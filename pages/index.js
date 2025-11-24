@@ -35,38 +35,46 @@ export default function Home({ allPostsData, desktopEnvs, packageManagers }) {
           The posts are created in WordPress with ACF custom fields for 'distro_name' and 'description'. 
         </p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Distrobutions</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, distro_name }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/Distros/${id}`}>{distro_name}</Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <ul className={`${utilStyles.list} ${utilStyles.categoryList}`}>
+        <li className={`${utilStyles.listItem} ${utilStyles.categoryListItem}`}>
+          <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+            <h2 className={utilStyles.headingLg}>Distrobutions</h2>
+            <ul className={utilStyles.list}>
+              {allPostsData.map(({ id, distro_name }) => (
+                <li className={utilStyles.listItem} key={id}>
+                  <Link href={`/posts/Distros/${id}`}>{distro_name}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </li>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Desktop Environments</h2>
-        <ul className={utilStyles.list}>
-          {desktopEnvs.map(({ id, de_name }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/DesktopEnvironments/${id}`}>{de_name}</Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+        <li className={`${utilStyles.listItem} ${utilStyles.categoryListItem}`}>
+          <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+            <h2 className={utilStyles.headingLg}>Desktop Environments</h2>
+            <ul className={utilStyles.list}>
+              {desktopEnvs.map(({ id, de_name }) => (
+                <li className={utilStyles.listItem} key={id}>
+                  <Link href={`/posts/DesktopEnvironments/${id}`}>{de_name}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </li>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Package Managers</h2>
-        <ul className={utilStyles.list}>
-          {packageManagers.map(({ id, pm_name }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/PackageManagers/${id}`}>{pm_name}</Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+        <li className={`${utilStyles.listItem} ${utilStyles.categoryListItem}`}>
+          <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+            <h2 className={utilStyles.headingLg}>Package Managers</h2>
+            <ul className={utilStyles.list}>
+              {packageManagers.map(({ id, pm_name }) => (
+                <li className={utilStyles.listItem} key={id}>
+                  <Link href={`/posts/PackageManagers/${id}`}>{pm_name}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </li>
+      </ul>
     </Layout>
   );
 }
