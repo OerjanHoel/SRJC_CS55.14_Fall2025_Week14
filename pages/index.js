@@ -30,9 +30,9 @@ export default function Home({ allPostsData, desktopEnvs, packageManagers }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          This website uses the 'got' node package to retrive the JSON data from the WordPress posts,
-          residing in the WP Database. The data is then parsed and displayed as a list of blog articles. 
-          The posts are created in WordPress with ACF custom fields for 'distro_name' and 'description'. 
+          This website uses Next.js and WordPress to display information about Linux distributions,
+          desktop environments, and package managers. The data is fetched from WordPress posts using custom fields
+          created with the Advanced Custom Fields (ACF) plugin. Feel free to explore the different categories below to learn more about each topic. 
         </p>
       </section>
       <ul className={`${utilStyles.list} ${utilStyles.categoryList}`}>
