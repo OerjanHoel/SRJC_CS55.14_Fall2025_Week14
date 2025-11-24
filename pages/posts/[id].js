@@ -1,5 +1,5 @@
 import Layout from '../../components/layout'; // Imports the layout from components folder
-import { getPostData, getAllPostIds } from '../../lib/posts-json'; // Imports the helper that fetches JSON posts
+import { getPostData, getAllPostIds } from '../../lib/post-data'; // Imports the helper that fetches JSON posts
 import Head from 'next/head'; // Imports head from Next.js
 import utilStyles from '../../styles/utils.module.css'; // Imports the CSS from utils.module.css file
 

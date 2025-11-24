@@ -2,7 +2,7 @@ import Head from 'next/head'; // Imports head from Next.js
 import Link from 'next/link'; // Imports link from Next.js
 import Layout, { siteTitle } from '../components/layout'; // Imports layout and sisteTitle from layout.js. siteTitle a variable in layout.js
 import utilStyles from '../styles/utils.module.css'; // Imports CSS from utils.module.css file
-import { getSortedPostsData } from '../lib/posts-json'; // Imports function from posts-json.js
+import { getSortedPostsData } from '../lib/post-data'; // Imports function from posts-json.js
 
 // Function creates the static html for our blog posts
 export async function getStaticProps() {
@@ -32,11 +32,11 @@ export default function Home({ allPostsData }) {
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog Articles</h2>
+        <h2 className={utilStyles.headingLg}>Learn more about Linux</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, title }) => (
+          {allPostsData.map(({ id, distro_name }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
+              <Link href={`/posts/${id}`}>{distro_name}</Link>
             </li>
           ))}
         </ul>
