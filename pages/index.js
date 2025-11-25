@@ -19,7 +19,7 @@ export async function getStaticProps() {
     revalidate: 10,
   };
 }
-// Function creates Home based on the importet 
+// Function creates Home based on the imported 
 // compnonents from next.js and layout.js file
 // Compnents are JSX elements
 export default function Home({ allPostsData, desktopEnvs, packageManagers }) {
